@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.Button
+import androidx.core.os.postDelayed
 import com.wipro.testapp.R
 
 
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     }
+
+    // Splash Activity with the dealy of 1500ms
     override fun onResume() {
         super.onResume()
 
@@ -23,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed(Runnable {
             startActivity(Intent(intent))
             finish()
-        }, 1500)
+        }, R.dimen.time_in_ms.toLong())
     }
 }
 

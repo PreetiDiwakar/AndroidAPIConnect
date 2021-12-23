@@ -2,9 +2,11 @@ package com.wipro.testapp.viewmodel
 
 import android.app.Application
 import android.content.ContentValues.TAG
+import android.content.res.Resources
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.wipro.testapp.R
 import com.wipro.testapp.model.AllFactsResponse
 import com.wipro.testapp.model.ResultsItem
 import com.wipro.testapp.service.ApiClient
@@ -26,6 +28,7 @@ class GetAllFactsViewModel : ViewModel()  {
         apiClient = ApiClient()
     }
 
+    // Fectch the Facts and enqueue the facts data to the FactActivty
     fun getAllFacts(){
         apiClient
             .getApi()
@@ -38,13 +41,12 @@ class GetAllFactsViewModel : ViewModel()  {
                         title = response.body()!!.title!!
                         getFacts.value = response.body()!!.results!!
                     } else if (response.code() == 400 && response.errorBody() != null) {
-                        Log.d(TAG, "onResponse: ")
+                        Log.d(TAG, Resources.getSystem().getString(R.string.on_response) )
                     }
                 }
-
                 override fun onFailure(call: Call<AllFactsResponse?>, t: Throwable)
                 {
-                    Log.d(TAG, "onResponse: ")
+                    Log.d(TAG, Resources.getSystem().getString(R.string.on_response) + t)
                 }
             })
     }

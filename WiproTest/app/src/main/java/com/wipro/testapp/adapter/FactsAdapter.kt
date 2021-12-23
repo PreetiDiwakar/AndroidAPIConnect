@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.wipro.testapp.R
 import com.wipro.testapp.model.ResultsItem
 import com.bumptech.glide.Glide
-
+// RecyclerView adapter to populate the list View
 class FactsAdapter (private val mContext: Context, private val factlist: List<ResultsItem?>) : RecyclerView.Adapter<FactsAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FactsAdapter.MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item,parent,false)

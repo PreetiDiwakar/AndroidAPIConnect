@@ -10,6 +10,7 @@ class ApiClient {
     private var retrofit: Retrofit? = null
     var httpClient: OkHttpClient? = null
 
+    // API call using Retrofit to fetch the data from server
     fun getApi(): Api {
         if (retrofit == null) {
             val interceptor = HttpLoggingInterceptor()

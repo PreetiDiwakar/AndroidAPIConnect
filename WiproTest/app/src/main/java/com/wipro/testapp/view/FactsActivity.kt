@@ -26,6 +26,7 @@ class FactsActivity : AppCompatActivity() {
         initUi()
     }
 
+    // Initialization of UI after fetcing the data from APi call using ViewModel
     private fun initUi() {
 
         viewModel = ViewModelProvider(this).get(GetAllFactsViewModel::class.java)

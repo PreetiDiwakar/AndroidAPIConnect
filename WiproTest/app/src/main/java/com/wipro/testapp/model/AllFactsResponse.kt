@@ -1,6 +1,7 @@
 package com.wipro.testapp.model
 import com.google.gson.annotations.SerializedName
 
+// Get data from the API in the Response Model
 data class AllFactsResponse(
     @field:SerializedName("title")
     val title: String? = null,

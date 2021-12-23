@@ -6,6 +6,8 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 
 interface Api {
+    // url to get the Facts
+
     @GET("s/2iodh4vg0eortkl/facts.json")
     @Headers("Content-type: application/json")
     fun getAllFacts(): Call<AllFactsResponse?>
