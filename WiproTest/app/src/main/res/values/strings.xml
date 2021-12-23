@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WiproTest</string>
+    <string name="fact_title">Fact</string>
+    <string name="fact_des">Fact Description</string>
+    <string name="fact_image">Fact Image description</string>
+    <string name="on_response">onResponse</string>
+
+</resources>
